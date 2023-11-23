@@ -9,3 +9,18 @@
 - Uniform : 리소스 식별하는 통일된 방식
 - Resource : 자원, URI로 식별할 수 있는 모든 것(제한 없음)
 - Identifier : 다른 항목과 구분하는데 필요한 정보
+
+
+#Web 브라우저 요청 흐름
+![](img/request.png)
+
+![](img/packet.png)
+
+- 웹 브라우저가 HTTP 메세지 생성
+- TCP/IP 연결 (IP.PORT)
+- TCP?IP 패킷 생성, HTTP 메세지 포함
+ 
+
+![](img/response.png)
+- 요청 패킷 목적지로 전달 (다양한 노드들을 통해) > HTTP 응답 메세지 생성
+- 요청한 쪽으로 메세지 전달 > 웹 브라우저 렌더링
