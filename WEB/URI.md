@@ -25,3 +25,18 @@
 <img src="img/response.png" alt="이미지 설명" width="700" height="500">
 - 요청 패킷 목적지로 전달 (다양한 노드들을 통해) > HTTP 응답 메세지 생성
 - 요청한 쪽으로 메세지 전달 > 웹 브라우저 렌더링
+
+# HTTP
+
+## 특징
+- 모든것이 HTTP : HTML, 음성, 영상, 이미지, JSON 등 거의 모든 형태의 데이터 전송 가능
+- 클라이언트 서버 구조 : 
+- Stateful, stateless
+- 비 연결성
+- HTTP 메세지
+
+## 기반 프로토콜
+- TCP : HTTP/1.1(주된) , HTTP/2
+- UDP : HTTP3
+
+
