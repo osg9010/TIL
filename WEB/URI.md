@@ -11,7 +11,7 @@
 - Identifier : 다른 항목과 구분하는데 필요한 정보
 
 
-#Web 브라우저 요청 흐름
+# Web 브라우저 요청 흐름
 <img src="img/request.png" alt="이미지 설명" width="500" height="500">
 
 <img src="img/packet.png" alt="이미지 설명" width="700" height="500">
@@ -23,6 +23,7 @@
  
 
 <img src="img/response.png" alt="이미지 설명" width="700" height="500">
+
 - 요청 패킷 목적지로 전달 (다양한 노드들을 통해) > HTTP 응답 메세지 생성
 - 요청한 쪽으로 메세지 전달 > 웹 브라우저 렌더링
 
