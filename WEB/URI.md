@@ -12,7 +12,9 @@
 
 
 # Web 브라우저 요청 흐름
-<img src="img/request.png" alt="이미지 설명" width="500" height="500">
+<div align="center">
+  <img src="img/request.png" alt="이미지 설명" width="500" height="500">
+</div>
 
 <img src="img/packet.png" alt="이미지 설명" width="700" height="500">
 
