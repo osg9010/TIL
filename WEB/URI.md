@@ -65,7 +65,7 @@
   - 단점 : 
     - TCP/IP 의 새로운 연결로 3wayhandshake 시간증가 > HTML, css, 이미지 등 수 많은 자원 다운로드
     - 지금은 HTTP 지속 연결(Persistent Connections)로 문제 해결
-    - HTTP/3 에서는 UDP 연결등으로 더욱 최적회
+    - HTTP/3 에서는 UDP 연결등으로 더욱 최적화
     
 - HTTP 메세지 :
 
