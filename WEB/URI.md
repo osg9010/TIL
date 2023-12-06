@@ -155,8 +155,9 @@
       - POST, PATCH는 본문 내용까지 캐시 키로 고려해야 하는데, 구현이 쉽지 않음
   
   
-  ## HTTP 메서드 활용
-  - 클라이언트에서 서버로 데이터 전송
+ # HTTP 메서드 활용
+ ## 클라이언트에서 서버로 데이터 전송
+  
     - 1 쿼리 파라미터를 통한 데이터 전송
       - GET
       - 주로 정렬 필터(검색어)
@@ -212,5 +213,45 @@
         - Content-Type : application/json을 주로 사용(사실상 표준)
           - TEXT,XML,JSON 등등
       
-  - HTTP API 설계 예시
+  ## HTTP API 설계 예시
+  
+  - HTTP API 
+    - 1 POST 기반 등록 POST /members
+    
+      - 클라이언트는 등록될 리소스의 URI 를 모른다
+        - 회원등록 : POST /members
+        
+      - 서버가 새로 등록된 리소스 URI 를 생성해준다.
+      - 컬렉션 (이런 방식)
+        - 서버가 관리하는 리소스 디렉토리
+        - 서버가 리소스의 URI 를 생성하고 관리
+        - 여기서 컬렉션은 /members
+        
+    - 2 PUT 기반 등록 (파일 관리 시스템) PUT /files/{filename}
+    
+        - 클라이언트가 리소스 URI를 알고 있어야 한다.
+          - 파일 등록 PUT /files/star.jpg
+          
+        - 클라이언트가 직접 리소스의 URI를 지정
+        
+        - 스토어 (이런 방식)
+          - 클라이언트가 관리하는 리소스 저장소
+          - 클라이언트가 리소스의 URI를 알고 관리
+          - 여기서 스토어는 /files
+        
+     - 3 HTML FORM 사용
+     
+       - HTML FORM은 GET, POST 만 지원
+       
+       - 컨트롤 URI
+         - GET, POST 만 지원
+         - 이런 제약을 해결하기 위해 동사로 된 리소스 경로 사용(컨트롤 URI)
+         - POST의 /new, /edit, /delete 가 컨트롤 URI (행위)
+         - HTTP 메서드로 해결하기 애매한 경우 사용
+        
+      <div align="center">
+        <img src="img/naming.png" alt="이미지 설명" width="500" height="500">
+      </div>
+    
 
+  
