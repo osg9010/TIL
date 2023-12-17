@@ -166,3 +166,38 @@ Quality Values(q)
     - 리소스 접근 시 필요한 인증 방법 정의
     - 401 Unauthorized 응답과 함께 사용
     - WWW-Authenticate : Newauth realm="apps", type=1, title="Login to \\"apps\\"", Basic realm="simple"
+    
+ ### 쿠키
+ 
+ - 사용처 :
+   - 사용자 로그인 세션 관리
+   - 광고 정보 트래킹
+ - 쿠키 정보는 항상 서버에 전송됨
+   - 네트워크 트래픽 추가 유발
+   - 최소한의 정보만 사용(세션ID, 인증토큰)
+   - 서버에 전송하지 않고, 웹 브라우저 내부에 데이터를 저장하고 싶으면 웹 스토리지(localStorage, sessionStorage) 참고
+ - 주의!
+   - 보안에 민감한 데이터는 저장 X
+ 
+ - Set-Cookie : 서버에서 클라이언트로 쿠키 전달.(응답)
+   - expires=Sat, 17-Dec-2023 04:39:21 GMT 
+   - max-age= 3600(3600초) (0이나 음수면 쿠키 삭제)
+   - 세션 쿠키 : 만료 날짜를 생략 하면 브라우저 종료시 까지만 유지
+   - 영속 쿠키 : 만료 날짜를 입력하면 해당 날짜까지 유지
+   
+ - Cookie : 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달
+   
+ - 쿠키 - 보안
+   - Secure
+     - HTTPS 인 경우에만 쿠키 전송
+     
+   - HttpOnly
+     - XSS 공격 방지
+     - 자바스크립트에서 접근 불가
+     - HTTP 전송에만 사용
+     
+   - SameSite
+     - XSRF 공격 방지
+     - 요청 도메인과 쿠키에 설정된 도메인이 같은 경우만 쿠키 전송 
+ 
+ 
