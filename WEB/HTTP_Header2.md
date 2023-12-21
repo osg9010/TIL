@@ -66,10 +66,17 @@
    - max-age : 캐시 유효 시간, 초 단위
    - no-cache : 데이터는 캐시해도 되지만, 항상 원(origin) 서버에 검증하고 사용
    - no-store : 데이터에 민감한 정보가 있음으로 저장하면 안됨(메모리에서 사용 후 빨리 삭제)
+   - 프록시
+     - public : 응답이 public 캐시에 저장되어도 됨
+     - private : private 캐시에 저장되어야 함
+     - s-maxage : 프록시 캐시에만 적용되는 max-age
+     - Age:60 (HTTP 헤더) : 오리진 서버에서 응답 후 프록시 캐시 내에 머문 시간(초)
    
  - Pragma : 캐시 제어 (하위 호환) - HTTP/1.0    
    
  - Expires : 캐시 유효 기간 (하위 호환) - HTTP/1.0
+ 
+ 
    
    
  
