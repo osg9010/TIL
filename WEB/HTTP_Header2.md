@@ -77,7 +77,21 @@
  - Expires : 캐시 유효 기간 (하위 호환) - HTTP/1.0
  
  
+### 캐시 무효화
+ - Cache-Control
+   - no-cache : 데이터는 캐시해도 되지만, 항상 원 서버에 검증하고 사용
+   - no-store : 저장하면 안됨(메모리에서 사용 후 빨리 삭제)
+   - must-revalidate : 
+     - 캐시 만료 후 최초 조회 시 원 서버에 검증해야함
+     - 원 서버에 접근 실패시 반드시 504 (Gateway Timeout) 이 발생 해야함
    
+   - no-cache vs must-revalidate
+     - no-cache : 원 서버에 네트워크 접속 실패 시 경우에 따라 프록시 서버에서 200을 내려서 오래된 데이터라도 보여줄 수 있음
+     - must-revalidate : 원 서버 네트워크 접속 실패 시에는 무조건 504 에러 발생
+   
+   
+ - Pragma
+   - no-cache : HTTP/1.0 (하위호환)
    
  
  
