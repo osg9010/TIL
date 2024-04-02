@@ -14,7 +14,7 @@
 
 # 요청 맵핑 핸들러 어댑더 구조
 
-###ArgumentResolver (HandlerMethodArgumentResolver)
+### ArgumentResolver (HandlerMethodArgumentResolver)
 - ArgumentResolver 를 호출하며 컨트롤러(핸들러) 가 파라미터 처리에 필요한 다양한 값들을 생성한다.
 
 ### 동작 방식
