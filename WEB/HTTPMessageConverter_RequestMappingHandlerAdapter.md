@@ -1,4 +1,4 @@
-#HTTP 메시지 컨버터
+# HTTP 메시지 컨버터
 
 - canRead() , canWrite() : 메시지 컨버터가 해당 클래스, 미디어타입을 지원하는지 체크
 - read() , write() : 메시지 컨버터를 통해서 메시지를 읽고 쓰는 기능
@@ -14,7 +14,7 @@
 
 # 요청 맵핑 핸들러 어댑더 구조
 
-###ArgumentResolver (HandlerMethodArgumentResolver)
+### ArgumentResolver (HandlerMethodArgumentResolver)
 - ArgumentResolver 를 호출하며 컨트롤러(핸들러) 가 파라미터 처리에 필요한 다양한 값들을 생성한다.
 
 ### 동작 방식
