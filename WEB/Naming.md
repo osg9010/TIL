@@ -5,3 +5,13 @@
 - 자바의 예약어 사용 불가 (int, class, public)
 - 변수 이름에는 영문자, 숫자, 달러기호, 및줄만 사용 가능
 
+# 자바에서의 표기법
+- 클래스는 첫 글자 대문자, 낙타표기법
+- 그외는 첫 글자 소문자, 낙타표기법
+  - 예시 클래스: Person, Order
+  - 그외 : firstName, orderNumber
+- 예외
+  - 상수는 모두 대문자 언더바로 구분
+    - 예시 USER_LIMIT
+  - 패키지는 모두 소문자
+    - org.spring.boot
